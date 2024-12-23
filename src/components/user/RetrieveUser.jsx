@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import { Col, Card, Row } from "react-bootstrap";
 import { useParams } from "react-router-dom";
 
-import Layout from "./Layout";
+import Layout from "../layout/Layout";
 
 function RetrieveUser() {
   const { userId } = useParams();
@@ -37,7 +37,6 @@ function RetrieveUser() {
                 <p>{user.email}</p>
                 {user.city && user.country && (
                   <p>
-                    {" "}
                     {user.city} - {user.country}
                   </p>
                 )}

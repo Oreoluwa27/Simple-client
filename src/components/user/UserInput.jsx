@@ -3,7 +3,7 @@ import { Form, Col, Row, Button } from "react-bootstrap";
 import axios from "axios";
 import { toast } from "react-toastify";
 
-import Layout from "./Layout";
+import Layout from "../layout/Layout";
 
 function UserInput() {
   const createUserEndpoint = "http://localhost:4000/v1/user/add";
@@ -90,7 +90,7 @@ function UserInput() {
             </Form.Group>
 
             <Button variant="primary" type="submit" onClick={createNewUser}>
-              Add User
+              Add
             </Button>
           </Form>
         </Col>

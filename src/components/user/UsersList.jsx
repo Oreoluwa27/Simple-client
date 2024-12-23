@@ -1,8 +1,9 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { Card, Col, Row } from "react-bootstrap";
+import { Button, Card, Col, Row } from "react-bootstrap";
 
-import Layout from "./Layout";
+import Layout from "../layout/Layout";
+import { NavLink } from "react-router-dom";
 
 function UsersList() {
   const getAllUsersEndpoint = "http://localhost:4000/v1/user/all";
@@ -32,6 +33,22 @@ function UsersList() {
                   {user.city} - {user.country}
                 </p>
               )}
+              <Button
+                as={NavLink}
+                to={`/edit/${user.id}`}
+                variant="primary"
+                className="mx-3"
+              >
+                Edit
+              </Button>
+              <Button
+                as={NavLink}
+                to={`/remove/${user.id}`}
+                variant="danger"
+                className="mx-3"
+              >
+                Delete
+              </Button>
             </Card.Body>
           </Card>
         </Col>
