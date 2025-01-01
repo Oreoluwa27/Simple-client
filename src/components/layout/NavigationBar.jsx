@@ -8,7 +8,6 @@ function NavigationBar() {
       <Navbar sticky="top" bg="light" variant="primary">
         <Container>
           <Navbar.Brand as={NavLink} to="/">
-            {" "}
             Simple Client
           </Navbar.Brand>
 

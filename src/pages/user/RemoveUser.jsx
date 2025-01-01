@@ -1,10 +1,9 @@
-import React from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom";
 import { toast } from "react-toastify";
 import { Button } from "react-bootstrap";
 
-import Layout from "../layout/Layout";
+import Layout from "../../components/layout/Layout";
 
 function RemoveUser() {
   const DELAY_BEFORE_REDIRECTION = 1000;

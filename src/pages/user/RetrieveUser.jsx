@@ -1,9 +1,9 @@
 import axios from "axios";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Col, Card, Row } from "react-bootstrap";
 import { useParams } from "react-router-dom";
 
-import Layout from "../layout/Layout";
+import Layout from "../../components/layout/Layout";
 
 function RetrieveUser() {
   const { userId } = useParams();

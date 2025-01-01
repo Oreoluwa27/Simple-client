@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Form, Col, Row, Button } from "react-bootstrap";
 import axios from "axios";
 import { toast } from "react-toastify";
 
-import Layout from "../layout/Layout";
+import Layout from "../../components/layout/Layout";
 
 function UserInput() {
   const createUserEndpoint = "http://localhost:4000/v1/user/add";

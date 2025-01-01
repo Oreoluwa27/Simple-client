@@ -1,8 +1,8 @@
 import axios from "axios";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Button, Card, Col, Row } from "react-bootstrap";
 
-import Layout from "../layout/Layout";
+import Layout from "../../components/layout/Layout";
 import { NavLink } from "react-router-dom";
 
 function UsersList() {

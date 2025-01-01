@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom";
 import { Form, Col, Row, Button } from "react-bootstrap";
 import { toast } from "react-toastify";
 
-import Layout from "../layout/Layout";
+import Layout from "../../components/layout/Layout";
 
 function EditUser() {
   const { userId } = useParams();

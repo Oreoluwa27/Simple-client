@@ -4,10 +4,11 @@ import { Container } from "react-bootstrap";
 import { createGlobalStyle } from "styled-components";
 
 import NavigationBar from "./NavigationBar";
+import Footer from "./Footer";
 
 const BackgroundColor = createGlobalStyle`
 body{
-  background-color: #ffffff
+  background-color: #c5c6c7 
 }
 
 `;
@@ -21,6 +22,7 @@ function Layout({ children }) {
         <ToastContainer />
         {children}
       </Container>
+      <Footer />
     </>
   );
 }
