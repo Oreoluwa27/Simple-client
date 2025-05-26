@@ -5,6 +5,7 @@ function Footer() {
   return (
     <>
       <Container>
+        <hr />
         <Row className="justify-content-center">
           <Col md={{ span: 3, offset: 1 }}>
             <h4>Contact</h4>

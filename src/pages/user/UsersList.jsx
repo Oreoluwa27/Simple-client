@@ -21,45 +21,43 @@ function UsersList() {
 
   const renderedUsers = users.map((user) => {
     return (
-      <Row key={user.id} className="justify-content-center mb-5">
-        <Col lg={4}>
-          <Card>
-            <Card.Body>
-              <h4>{user.name}</h4>
-              <p>{user.email}</p>
-              {user.city && user.country && (
-                <p>
-                  {" "}
-                  {user.city} - {user.country}
-                </p>
-              )}
-              <Button
-                as={NavLink}
-                to={`/edit/${user.id}`}
-                variant="primary"
-                className="mx-3"
-              >
-                Edit
-              </Button>
-              <Button
-                as={NavLink}
-                to={`/remove/${user.id}`}
-                variant="danger"
-                className="mx-3"
-              >
-                Delete
-              </Button>
-            </Card.Body>
-          </Card>
-        </Col>
-      </Row>
+      <Col key={user.id} lg={4} md={6} className="mb-4">
+        <Card>
+          <Card.Body>
+            <h4>{user.name}</h4>
+            <p>{user.email}</p>
+            {user.city && user.country && (
+              <p>
+                {" "}
+                {user.city} - {user.country}
+              </p>
+            )}
+            <Button
+              as={NavLink}
+              to={`/edit/${user.id}`}
+              variant="primary"
+              className="mx-3"
+            >
+              Edit
+            </Button>
+            <Button
+              as={NavLink}
+              to={`/remove/${user.id}`}
+              variant="danger"
+              className="mx-3"
+            >
+              Delete
+            </Button>
+          </Card.Body>
+        </Card>
+      </Col>
     );
   });
 
   return (
     <Layout>
       <h3 className="text-center">Users</h3>
-      <Row className="d-flex flex-row flex-wrap justify-content-between ">
+      <Row className="d-flex flex-row flex-wrap justify-content-start ">
         {renderedUsers}
       </Row>
     </Layout>
