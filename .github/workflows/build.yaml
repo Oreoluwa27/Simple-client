@@ -97,3 +97,14 @@ jobs:
           --namespace $HELM_NAMESPACE \
           --create-namespace \
           --set simple-app-frontend.image.tag=$IMAGE_TAG
+      - name: Update image tag in values.yaml
+        run: |
+          sed -i "s/tag:.*/tag: $IMAGE_TAG/" $HELM_CHART_PATH/values.yaml
+
+      - name: Commit and push changes
+        run: |
+          git config --global user.name "github-actions"
+          git config --global user.email "github-actions@github.com"
+          git add $HELM_CHART_PATH/values.yaml
+          git commit -m "Update image tag to $IMAGE_TAG [skip ci]" || echo "No changes to commit"
+          git push https://x-access-token:${{ secrets.PERSONAL_ACCESS_TOKEN }}@github.com/Oreoluwa27/Simple-app-helm-chart.git HEAD:main
