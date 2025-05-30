@@ -2,12 +2,12 @@ name: Docker image build & deploy
 on:
   push:
     branches: ["main"]
-    path:
+    paths:
       - "src/**"
       - "Dockerfile"
   pull_request:
     branches: ["main"]
-    path:
+    paths:
       - "src/**"
       - "Dockerfile"
 
