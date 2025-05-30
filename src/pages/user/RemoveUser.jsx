@@ -8,7 +8,7 @@ import Layout from "../../components/layout/Layout";
 function RemoveUser() {
   const DELAY_BEFORE_REDIRECTION = 1000;
   const { userId } = useParams();
-  const RemoveUserEndPoint = `http://localhost:4000/v1/user/${userId}`;
+  const RemoveUserEndPoint = `http://backend-service.default.svc.cluster.local:80/v1/user/${userId}`;
 
   const removeUser = async () => {
     try {

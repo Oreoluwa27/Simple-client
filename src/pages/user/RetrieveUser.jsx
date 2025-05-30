@@ -7,7 +7,7 @@ import Layout from "../../components/layout/Layout";
 
 function RetrieveUser() {
   const { userId } = useParams();
-  const getUserEndpoint = `http://localhost:4000/v1/user/${userId}`;
+  const getUserEndpoint = `http://backend-service.default.svc.cluster.local:80/v1/user/${userId}`;
 
   const [user, setUser] = useState({});
 

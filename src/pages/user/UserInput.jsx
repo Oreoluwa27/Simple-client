@@ -6,7 +6,8 @@ import { toast } from "react-toastify";
 import Layout from "../../components/layout/Layout";
 
 function UserInput() {
-  const createUserEndpoint = "http://localhost:4000/v1/user/add";
+  const createUserEndpoint =
+    "http://backend-service.default.svc.cluster.local:80/v1/user/add";
 
   const [user, setUser] = useState({
     name: "",
