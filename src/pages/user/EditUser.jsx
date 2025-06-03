@@ -8,8 +8,8 @@ import Layout from "../../components/layout/Layout";
 
 function EditUser() {
   const { userId } = useParams();
-  const EditUserEndpoint = `http://backend-service.default.svc.cluster.local:80/v1/user/update/${userId}`;
-  const RetrieveUserEndpoint = `http://backend-service.default.svc.cluster.local:80/v1/user/${userId}`;
+  const EditUserEndpoint = `http://localhost:4000/v1/user/update/${userId}`;
+  const RetrieveUserEndpoint = `http://localhost:4000/v1/user/${userId}`;
   const [user, setUser] = useState({});
 
   const fetchUser = async () => {

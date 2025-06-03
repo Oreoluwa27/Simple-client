@@ -6,8 +6,7 @@ import Layout from "../../components/layout/Layout";
 import { NavLink } from "react-router-dom";
 
 function UsersList() {
-  const getAllUsersEndpoint =
-    "http://backend-service.default.svc.cluster.local:80/v1/user/all";
+  const getAllUsersEndpoint = "http://localhost:4000/v1/user/all";
   const [users, setUsers] = useState([]);
 
   const fetchUser = async () => {
